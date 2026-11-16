@@ -1,11 +1,12 @@
 import { useState } from "react";
-export default function Player({InitialName, symbol, isActive}) {
+export default function Player({InitialName, symbol, isActive, onChangeName}) {
     const [PlayerName, setPlayerName] = useState (InitialName);
     const [draftName, setDraftName] = useState ("");
     const [isEditing, setisEditing] = useState (false);
     function handleEditClick() {
         if (isEditing && draftName.trim() !== "") {
             setPlayerName(draftName.trim());
+            onChangeName(symbol, draftName.trim());
         }
         setDraftName("");
         setisEditing((editing) => !editing) ;
