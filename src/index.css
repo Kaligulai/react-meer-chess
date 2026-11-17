@@ -349,3 +349,167 @@ ol {
     transform: scale(1);
   }
 }
+
+/* ---------- Responsive: tablet ---------- */
+@media (max-width: 768px) {
+  body {
+    min-height: 100vh;
+  }
+
+  header img {
+    width: 6rem;
+    margin: 2rem auto 0.75rem auto;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+
+  #game-container {
+    margin: 2rem 1rem;
+    padding: 1.5rem;
+  }
+
+  #players {
+    gap: 1rem;
+  }
+
+  .player-name,
+  .player input {
+    width: 8rem;
+  }
+
+  .player-name {
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .player {
+    display: flex;
+    align-items: center;
+  }
+
+  .player-symbol {
+    margin-left: 0.5rem;
+  }
+
+  #game-board {
+    gap: 1.5rem;
+    margin: 2rem 0;
+  }
+
+  #game-board ol {
+    gap: 1.5rem;
+  }
+
+  #game-board button {
+    width: 6.5rem;
+    height: 6.5rem;
+    font-size: 4rem;
+    padding: 0;
+  }
+
+  #game-over h2 {
+    font-size: 3rem;
+  }
+
+  #game-over p {
+    font-size: 1.5rem;
+  }
+
+  #pre-game button {
+    font-size: 3rem;
+  }
+}
+
+/* ---------- Responsive: phone ---------- */
+@media (max-width: 480px) {
+  header img {
+    width: 4.5rem;
+    margin: 1.5rem auto 0.5rem auto;
+  }
+
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 1.25rem;
+  }
+
+  #game-container {
+    margin: 1rem 0.75rem;
+    padding: 1rem;
+  }
+
+  /* Players stacked one above the other */
+  #players {
+    flex-direction: column;
+    gap: 0.5rem;
+    margin: 0.5rem 0;
+  }
+
+  #players li {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  #players button {
+    width: 3.5rem;
+    padding: 0.75rem 0.25rem;
+  }
+
+  .player-name,
+  .player input {
+    width: 9rem;
+    font-size: 0.9rem;
+  }
+
+  /* Board squares scale with screen width:
+     6rem = side margins (1.5rem) + container padding (2rem) + 2 gaps (1.5rem) + reserve (1rem) */
+  #game-board {
+    gap: 0.75rem;
+    margin: 1.25rem 0;
+  }
+
+  #game-board ol {
+    gap: 0.75rem;
+    flex-wrap: nowrap;
+  }
+
+  #game-board button {
+    width: min(6rem, calc((100vw - 6rem) / 3));
+    height: min(6rem, calc((100vw - 6rem) / 3));
+    font-size: 3rem;
+  }
+
+  #game-over h2 {
+    font-size: 2.25rem;
+  }
+
+  #game-over p {
+    font-size: 1.25rem;
+    margin: 0.75rem 0;
+  }
+
+  #game-over button {
+    font-size: 1.25rem;
+  }
+
+  #pre-game button {
+    font-size: 2.25rem;
+  }
+
+  #log {
+    max-width: 100%;
+    margin: 1rem auto;
+    padding: 0 1rem;
+    font-size: 0.9rem;
+  }
+
+  #log li {
+    margin: 0.5rem 0;
+  }
+
+  #game-hints h2 {
+    font-size: 1.5rem;
+  }
+}
