@@ -54,6 +54,3 @@ Then open the URL that Vite prints (http://localhost:5173/react-meer-chess/).
 | `npm run preview` | Serve the production build       |
 | `npm run lint`    | Run ESLint                       |
 
-## Deployment
-
-Every push to `main` runs a [GitHub Actions workflow](.github/workflows/deploy.yml). It lints and builds the app, then publishes it to GitHub Pages.
